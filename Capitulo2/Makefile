@@ -3,20 +3,20 @@ all: saxpy eucDist dotProduct vectorSum anyDimMatMul sharedMemMatMul
 saxpy: saxpy.cu
 	nvcc -o saxpy saxpy.cu
 
-eucDist: euclideanDistance.cu
-	nvcc -o euclideanDistance euclideanDistance.cu
+eucDist: Ex1.cu
+	nvcc -o ex1 Ex1.cu
 
-dotProduct: dotProduct.cu
-	nvcc -o dotProduct dotProduct.cu
+dotProduct: Ex2.cu
+	nvcc -o ex2 Ex2.cu
 
-vectorSum: vectorSum.cu
-	nvcc -o vectorSum vectorSum.cu
+vectorSum: Ex3.cu
+	nvcc -o ex3 Ex3.cu
 
-anyDimMatMul: anyDimMatMult.cu
-	nvcc -o anyDimMatMul anyDimMatMult.cu
+anyDimMatMul: Ex4.cu
+	nvcc -o ex4 Ex4.cu
 
-sharedMemMatMul: sharedMemMatMult.cu
-	nvcc -o sharedMemMatMul sharedMemMatMult.cu
+sharedMemMatMul: Ex5.cu
+	nvcc -o ex5 Ex5.cu
 
 clean: 
-	rm saxpy euclideanDistance dotProduct vectorSum anyDimMatMul sharedMemMatMul
+	rm saxpy ex1 ex2 ex3 ex4 ex5
